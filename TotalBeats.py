@@ -28,6 +28,21 @@ def beatCounter(listOfBeats):
                 totalBeats += 1
     return(totalBeats)
 
-btr = beatReader("bpq.txt")
-print(beatCounter(btr))
+'''
+    Name: beatPrints
+    Purpose: Print total beats in an innapropriate way.
+    Return: 0, (exits)
+'''
+def beatPrint(intOfBeats):
+
+    print("=" * 25 +  "D\n" \
+         "Total counted beats: " + str(intOfBeats) + "\n" + \
+         "=" * 25 +  "D")
+
+    return(0)
+if __name__ == "__main__":
+
+    btr = beatReader("bpq.txt")
+    countedBeats= beatCounter(btr)
+    beatPrint(countedBeats)
 
