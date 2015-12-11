@@ -1,4 +1,7 @@
 #!/bin/bash
+# Args: domain to query to get the TTL values for
+# writes the outputs to bpq.txt
+# ex. ./command.sh google.com
 
 if [ "$#" -ne 1 ]; then 
     echo "Please specify the domain to query as the first argument. Ctrl+C to quit"
