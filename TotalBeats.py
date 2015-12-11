@@ -20,7 +20,6 @@ def beatReader(fileToRead):
 '''
 def beatCounter(listOfBeats):
 
-    nbeat = 1000000000000000000
     totalBeats = 0
 
     for beat in range(0, len(listOfBeats)):
