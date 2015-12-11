@@ -1,6 +1,11 @@
 #!/usr/bin/env python
+__author__ = "Jared E. Stroud"
 
-
+'''
+    Name: beatReader
+    Purpose: fileToRead
+    Return: list of strings.
+'''
 def beatReader(fileToRead):
 
     with open(fileToRead, "r") as fin:
@@ -8,18 +13,21 @@ def beatReader(fileToRead):
 
     return beats
 
+'''
+    Name: beatCounter
+    Purpose: listofBeats
+    Return: integer value.
+'''
 def beatCounter(listOfBeats):
 
     nbeat = 1000000000000000000
     totalBeats = 0
 
-    for beat in listOfBeats:
-        beat = beat.strip("\n")
-        beat = int(beat)
+    for beat in range(0, len(listOfBeats)):
 
-        if beat < nbeat:
-            nbeat = beat
-            totalBeats += 1
+        if beat != 0:
+            if int(listOfBeats[beat]) < int(listOfBeats[beat-1]):
+                totalBeats += 1
 
     return(totalBeats)
 
