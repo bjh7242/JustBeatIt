@@ -24,13 +24,9 @@ def beatCounter(listOfBeats):
     totalBeats = 0
 
     for beat in range(0, len(listOfBeats)):
-
-        if beat != 0:
-            if int(listOfBeats[beat]) < int(listOfBeats[beat-1]):
+        if beat != 0 and int(listOfBeats[beat] < listOfBeats[beat-1]):
                 totalBeats += 1
-
     return(totalBeats)
-
 
 btr = beatReader("bpq.txt")
 print(beatCounter(btr))
